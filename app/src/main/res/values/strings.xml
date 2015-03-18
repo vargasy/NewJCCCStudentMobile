@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">NewJCCCStudentMobile</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="searchDefaultMessage">Enter your search here.</string>
+    <string name="button_text">Search</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="app_Name">JCCC Mobile App</string>
+    <string name="title_activity_phone_calls">phoneCalls</string>
+    <string name="wellButton">Wellness</string>
+    <string name="title_activity_well">WellActivity</string>
+    <string name="title_activity_well_details">WellDetailsActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_wellness">WellnessActivity</string>
+    <string name="title_activity_wellness_">Wellness_Activity</string>
+    <string name="title_activity_news_">News_Activity</string>
+    <string name="title_activity_news"/>
+
+</resources>
