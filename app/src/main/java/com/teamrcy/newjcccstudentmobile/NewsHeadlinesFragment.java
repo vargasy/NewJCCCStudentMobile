@@ -29,7 +29,7 @@ public class NewsHeadlinesFragment extends ListFragment {
                 android.R.layout.simple_list_item_activated_1 : android.R.layout.simple_list_item_1;
 
         // Create an array adapter for the list view, using the NewsText headlines array
-        setListAdapter(new ArrayAdapter<String>(getActivity(), layout, NewsText.Headlines));
+        setListAdapter(new ArrayAdapter<>(getActivity(), layout, NewsText.Headlines));
     }
 
     @Override

@@ -1,11 +1,8 @@
 package com.teamrcy.newjcccstudentmobile;
 
-import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 
 public class News_Activity extends ActionBarActivity

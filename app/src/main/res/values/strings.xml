@@ -10,11 +10,16 @@
     <string name="wellButton">Wellness</string>
     <string name="title_activity_well">WellActivity</string>
     <string name="title_activity_well_details">WellDetailsActivity</string>
+    <string name="facebookDesc">Facebook</string>
+    <string name="twitterDesc">Twitter</string>
+    <string name="linkedInDesc">LinkedIn</string>
+    <string name="youtubeDesc">YouTube</string>
+    <string name="emergencyDesc">Call Emergency</string>
+    <string name="jcccHomeDesc">JCCC Home</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_wellness">WellnessActivity</string>
-    <string name="title_activity_wellness_">Wellness_Activity</string>
-    <string name="title_activity_news_">News_Activity</string>
-    <string name="title_activity_news"/>
+    <string name="title_activity_wellness">Wellness</string>
+    <string name="title_activity_news_">News</string>
+
 
 </resources>

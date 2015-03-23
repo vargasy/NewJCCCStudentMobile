@@ -1,11 +1,13 @@
 package com.teamrcy.newjcccstudentmobile;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
 
 public class Wellness_Activity extends ActionBarActivity
 
@@ -39,6 +41,12 @@ public class Wellness_Activity extends ActionBarActivity
                         title).commit();
             }
         }
+
+    public void searchJCCC(View view) {
+        EditText editText = (EditText) findViewById(R.id.edit_message);
+        String message = editText.getText().toString();
+        startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.jccc.edu/search.html?q=" + message)));
+    }
 
 
     public void onDetailsSelected(int position) {

@@ -45,11 +45,12 @@ public class MainActivity extends ActionBarActivity {
 
     public void wellButtonOnClick(View v)
     {
-        startActivity(new Intent(getApplicationContext(), Wellness_Activity.class));
+        startActivity(new Intent(this, Wellness_Activity.class));
     }
+
     public void newsButtonOnClick(View v)
     {
-        startActivity(new Intent(getApplicationContext(),News_Activity.class));
+        startActivity(new Intent(this, News_Activity.class));
     }
 
     public void searchJCCC(View view) {

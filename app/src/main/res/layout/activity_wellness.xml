@@ -1,11 +1,47 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+     <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/jccc_logo_small"
+        android:contentDescription="@string/jcccHomeDesc"/>
+
+    <EditText
+        android:id="@+id/edit_message"
+        android:hint="@string/app_Name"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="search subject"/>
+
+    <ImageButton
+        android:id="@+id/sendButton"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:onClick="searchJCCC"
+        android:scaleType="fitCenter"
+        android:src="@drawable/search_icon"
+        android:contentDescription="search JCCC"
+        />
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.teamrcy.newjcccstudentmobile.Wellness_Activity">
+                tools:context=".Wellness_Activity">
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        style="Pane_2"
+        />
 
-</RelativeLayout>
+</LinearLayout>
+</LinearLayout>
