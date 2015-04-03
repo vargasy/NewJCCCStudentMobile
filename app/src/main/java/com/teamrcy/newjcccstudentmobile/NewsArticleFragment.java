@@ -1,8 +1,5 @@
 package com.teamrcy.newjcccstudentmobile;
 
-/**
- * Created by Yvonne on 3/17/2015.
- */
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,7 +23,7 @@ public class NewsArticleFragment extends Fragment {
         }
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.details_view, container, false);
+        return inflater.inflate(R.layout.article_view, container, false);
     }
 
     @Override

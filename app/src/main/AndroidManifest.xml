@@ -2,12 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.teamrcy.newjcccstudentmobile" >
 
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
     <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="18"/>
-    <uses-permission
-        android:name="android.permission.READ_PHONE_STATE" />
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -29,13 +37,27 @@
         </activity>
         <activity
             android:name=".Wellness_Activity"
-            android:label="@string/title_activity_wellness"
-            style="@style/Pane_1">
+            android:label="@string/title_activity_wellness" >
         </activity>
-
         <activity
             android:name=".News_Activity"
             android:label="@string/title_activity_news_" >
+        </activity>
+        <activity
+            android:name=".DiscountActivity"
+            android:label="@string/title_activity_discount" >
+        </activity>
+        <activity
+            android:name=".Resources_Activity"
+            android:label="@string/title_activity_resources_" >
+        </activity>
+        <activity
+            android:name=".Campus_Life_Activity"
+            android:label="@string/title_activity_campus__life_" >
+        </activity>
+        <activity
+            android:name=".AthleticsActivity"
+            android:label="@string/title_activity_athletics" >
         </activity>
     </application>
 

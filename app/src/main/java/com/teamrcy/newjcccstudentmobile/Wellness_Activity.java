@@ -1,27 +1,21 @@
 package com.teamrcy.newjcccstudentmobile;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-
 
 public class Wellness_Activity extends ActionBarActivity
-
     implements WellnessTitlesFragment.OnWellnessTitlesSelectedListener{
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
 
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.news_articles);  //re-use layout
+            setContentView(R.layout.wellness_info);
 
             // Check whether the activity is using the layout version with
             // the fragment_container FrameLayout. If so, we must add the first fragment
-            if (findViewById(R.id.fragment_container) != null) {
+            if (findViewById(R.id.well_title_container) != null) {
 
                 // However, if we're being restored from a previous state,
                 // then we don't need to do anything and should return
@@ -37,25 +31,19 @@ public class Wellness_Activity extends ActionBarActivity
                 title.setArguments(getIntent().getExtras());
 
                 // Add the fragment to the 'fragment_container' FrameLayout
-                getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().add(R.id.well_title_container,
                         title).commit();
             }
         }
-
-    public void searchJCCC(View view) {
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.jccc.edu/search.html?q=" + message)));
-    }
 
 
     public void onDetailsSelected(int position) {
         //The user selects a title
         WellnessDetailsFragment details = (WellnessDetailsFragment)
-                getSupportFragmentManager().findFragmentById(R.id.article_fragment);
+                getSupportFragmentManager().findFragmentById(R.id.well_detail_fragment);
 
         if (details != null) {
-            // If article is available, go to two-pane layout...
+            // If details is available, go to two-pane layout...
 
             // Call a method in the WellnessDetailsFragment to update its content
             details.updateDetailsView(position);
@@ -72,7 +60,7 @@ public class Wellness_Activity extends ActionBarActivity
 
             // Replace whatever is in the fragment_container view with this fragment,
             // and add the transaction to the back stack so the user can navigate back
-            transaction.replace(R.id.fragment_container, newDetails);
+            transaction.replace(R.id.well_title_container, newDetails);
 
             transaction.addToBackStack(null);
 

@@ -16,7 +16,7 @@ public class WellnessTitlesFragment extends ListFragment {
 
 
     public interface OnWellnessTitlesSelectedListener {
-        /** Called by HeadlinesFragment when a list item is selected */
+        /** Called by TitlesFragment when a list item is selected */
         public void onDetailsSelected(int position);
     }
 
@@ -37,7 +37,7 @@ public class WellnessTitlesFragment extends ListFragment {
         super.onStart();
 
         // When in two-pane layout, set the listview to highlight the selected list item
-        if (getFragmentManager().findFragmentById(R.id.article_fragment) != null) {
+        if (getFragmentManager().findFragmentById(R.id.well_detail_fragment) != null) {
             getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         }
     }
@@ -52,7 +52,7 @@ public class WellnessTitlesFragment extends ListFragment {
             mCallback = (OnWellnessTitlesSelectedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement OnHeadlineSelectedListener");
+                    + " must implement OnWellnessTitlesSelectedListener");
         }
     }
 

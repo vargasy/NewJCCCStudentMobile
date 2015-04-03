@@ -20,6 +20,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_wellness">Wellness</string>
     <string name="title_activity_news_">News</string>
+    <string name="title_activity_discount">DiscountActivity</string>
+    <string name="title_activity_resources_">Resources_Activity</string>
+    <string name="title_activity_campus__life_">Campus_Life_Activity</string>
+    <string name="title_activity_athletics">AthleticsActivity</string>
 
 
 </resources>

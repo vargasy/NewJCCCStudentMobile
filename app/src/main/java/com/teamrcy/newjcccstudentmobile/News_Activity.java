@@ -15,8 +15,8 @@ public class News_Activity extends ActionBarActivity
             setContentView(R.layout.news_articles);
 
             // Check whether the activity is using the layout version with
-            // the fragment_container FrameLayout. If so, we must add the first fragment
-            if (findViewById(R.id.fragment_container) != null) {
+            // the headline_container FrameLayout. If so, we must add the first fragment
+            if (findViewById(R.id.news_headline_container) != null) {
 
                 // However, if we're being restored from a previous state,
                 // then we don't need to do anything and should return
@@ -32,19 +32,19 @@ public class News_Activity extends ActionBarActivity
                 headline.setArguments(getIntent().getExtras());
 
                 // Add the fragment to the 'fragment_container' FrameLayout
-                getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().add(R.id.news_headline_container,
                         headline).commit();
             }
         }
 
 
     public void onArticleSelected(int position) {
-        //The user selects and article
+        //The user selects an article
         NewsArticleFragment article = (NewsArticleFragment)
-                getSupportFragmentManager().findFragmentById(R.id.article_fragment);
+                getSupportFragmentManager().findFragmentById(R.id.news_article_fragment);
 
         if (article != null) {
-            // If article is available, go to two-pane layout...
+            // If article is available, go to two panes ...
 
             // Call a method in the ArticleFragment to update its content
             article.updateArticleView(position);
@@ -61,7 +61,7 @@ public class News_Activity extends ActionBarActivity
 
             // Replace whatever is in the fragment_container view with this fragment,
             // and add the transaction to the back stack so the user can navigate back
-            transaction.replace(R.id.fragment_container, newFragment);
+            transaction.replace(R.id.news_headline_container, newFragment);
 
             transaction.addToBackStack(null);
 

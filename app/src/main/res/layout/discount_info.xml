@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+The following layout is an alternative to the layout shown in large layout.
+This filename is the same, but the the layout directory does not have the large qualifier
+so this layout is used when the device screen is smaller than large because the screen
+does not fit both fragments at the same time.       -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/discount_titles_container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             style="@style/Pane_1"
+
+    />

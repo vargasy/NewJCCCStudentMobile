@@ -1,8 +1,5 @@
 package com.teamrcy.newjcccstudentmobile;
 
-/**
- * Created by Yvonne on 3/17/2015.
- */
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -37,7 +34,7 @@ public class NewsHeadlinesFragment extends ListFragment {
         super.onStart();
 
         // When in two-pane layout, set the listview to highlight the selected list item
-        if (getFragmentManager().findFragmentById(R.id.article_fragment) != null) {
+        if (getFragmentManager().findFragmentById(R.id.news_article_fragment) != null) {
             getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         }
     }
