@@ -1,5 +1,7 @@
 package com.teamrcy.newjcccstudentmobile;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -42,11 +44,12 @@ public class WellnessDetailsFragment extends Fragment {
     }
 
     public void updateDetailsView(int position) {
-        TextView detail = (TextView) getActivity().findViewById(R.id.detail);
-        detail.setText(WellnessText.Details[position]);
+        startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(WellnessText.Details[position])));
         mCurrentPosition = position;
     }
-
+ /*
+        TextView detail = (TextView) getActivity().findViewById(R.id.detail);
+        detail.setText */
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);

@@ -4,25 +4,33 @@
     <!-- Base application theme. -->
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
     <color name="navy">#05034C</color>
     <style name="ActivityTheme" >
-        <item name="android:windowBackground">@color/navy</item>
-        <item name="android:textColor">#FFFFFF</item>
+       <!--  <item name="android:windowBackground">@color/navy</item> -->
+        <item name="android:windowBackground">@drawable/jccc_color_stripes</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:paddingTop">30sp</item>
     </style>
 
     <style name="Pane_1" >
-        <item name="android:background">#071649</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">20sp</item>
+      <!--  <item name="android:background">#071649</item>
+        <item name="android:textColor">#FFFFFF</item> -->
+        <item name="android:background">@drawable/jccc_color_stripes</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:paddingTop">40sp</item>
     </style>
 
     <style name="Pane_2" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:background">#FFFFFF</item>
-        <item name="android:textColor">#0000A3</item>
-        <item name="android:textSize">20sp</item>
+      <!--  <item name="android:background">#FFFFFF</item>
+        <item name="android:textColor">#0000A3</item>   -->
+
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:paddingTop">40sp</item>
     </style>
 
 </resources>

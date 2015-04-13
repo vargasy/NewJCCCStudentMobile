@@ -14,6 +14,8 @@
                 android:layout_height="0dp"
                 android:paddingBottom="50dp"
                 android:paddingTop="50dp"
+                android:layout_marginRight="20sp"
+                android:layout_marginEnd="20sp"
                 android:layout_weight="1">
 
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,53 +26,60 @@
 
             <TableRow android:layout_margin="10sp">
 
-                <TextView
+              <TextView
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="News"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_news_"
+                    android:onClick="newsAct"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/NewsButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="newsAct"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
                     android:background="#FFFFFF"
-                    android:src="@drawable/ic_news"/>
+                    android:src="@drawable/ic_news"
+                    android:contentDescription="@string/newsButton"/>
 
             </TableRow>
 
             <TableRow android:layout_margin="10sp">
 
-                <TextView
+             <TextView
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="Events"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_events"
+                    android:onClick="eventsNav"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/EventsButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="eventsNav"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
                     android:background="#FFFFFF"
-                    android:src="@drawable/ic_events"/>
+                    android:src="@drawable/ic_events"
+                    android:contentDescription="@string/eventsButton"/>
 
             </TableRow>
 
-            <TableRow android:layout_margin="10sp">
+            <TableRow android:layout_margin="10sp"
+                      android:layout_marginLeft="20sp">
 
                 <TextView
                     android:layout_width="0sp"
@@ -78,23 +87,26 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="Athletics"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_athletics"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/AthleticsButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="athleticsAct"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
                     android:background="#FFFFFF"
-                    android:src="@drawable/ic_athletics"/>
+                    android:src="@drawable/ic_athletics"
+                    android:contentDescription="@string/athleticsButton"/>
 
             </TableRow>
 
-            <TableRow android:layout_margin="10sp">
+            <TableRow android:layout_margin="10sp"
+                      android:layout_marginLeft="20sp">
 
                 <TextView
                     android:layout_width="0sp"
@@ -102,23 +114,26 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="MyJCCC"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_myjccc"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/MyJCCCButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="myJCCCNav"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
                     android:background="#FFFFFF"
-                    android:src="@drawable/ic_cav"/>
+                    android:src="@drawable/ic_cav"
+                    android:contentDescription="@string/myjcccButton"/>
 
             </TableRow>
 
-            <TableRow android:layout_margin="10sp">
+            <TableRow android:layout_margin="10sp"
+                      android:layout_marginLeft="20sp">
 
                 <TextView
                     android:layout_width="0sp"
@@ -126,23 +141,26 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="Resources"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_resources_"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/ResourcesButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="resourcesAct"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
                     android:background="#FFFFFF"
-                    android:src="@drawable/ic_resources"/>
+                    android:src="@drawable/ic_resources"
+                    android:contentDescription="@string/resourcesButton"/>
 
             </TableRow>
 
-            <TableRow android:layout_margin="10sp">
+            <TableRow android:layout_margin="10sp"
+                      android:layout_marginLeft="20sp">
 
                 <TextView
                     android:layout_width="0sp"
@@ -150,22 +168,25 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="Campus Life"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_campus__life_"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/CampusLifeButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="campusAct"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_campuslife"/>
+                    android:src="@drawable/ic_campuslife"
+                    android:contentDescription="@string/campusButton"/>
 
             </TableRow>
 
-            <TableRow android:layout_margin="10sp">
+            <TableRow android:layout_margin="10sp"
+               android:layout_marginLeft="20sp">
 
                 <TextView
                     android:layout_width="0sp"
@@ -173,22 +194,25 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="Discounts and Services"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_discount"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/DiscountsServicesButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="discountAct"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_discounts"/>
+                    android:src="@drawable/ic_discounts"
+                    android:contentDescription="@string/discountsButton"/>
 
             </TableRow>
 
-            <TableRow android:layout_margin="10sp">
+            <TableRow android:layout_margin="10sp"
+               android:layout_marginLeft="20sp">
 
                 <TextView
                     android:layout_width="0sp"
@@ -196,23 +220,26 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="Wellness"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_well"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/WellnessButton"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="wellnessAct"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_wellness"/>
+                    android:src="@drawable/ic_wellness"
+                    android:contentDescription="@string/wellButton"/>
 
             </TableRow>
 
 
-            <TableRow android:layout_margin="10sp">
+            <TableRow android:layout_margin="10sp"
+                android:layout_marginLeft="20sp">
 
                 <TextView
                     android:layout_width="0sp"
@@ -220,19 +247,21 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:padding="0sp"
-                    android:text="Contacts"
+                    android:layout_marginLeft="20sp"
+                    android:text="@string/title_activity_contacts"
                     android:textColor="#000000"
                     android:textSize="25sp"/>
 
                 <ImageButton
                     android:id="@+id/ContactsButtons"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
                     android:onClick="contactNav"
                     android:padding="0sp"
                     android:scaleType="fitCenter"
                     android:background="#FFFFFF"
-                    android:src="@drawable/ic_contacts"/>
+                    android:src="@drawable/ic_contacts"
+                    android:contentDescription="@string/contactsButton"/>
 
             </TableRow>
 
@@ -257,7 +286,7 @@
             android:layout_height="wrap_content"
             android:padding="0sp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_emergencycircle"
+            android:src="@drawable/ic_emergencysirens"
             android:onClick="callPolice"
             android:id="@+id/policeButton"
             android:contentDescription="@string/emergencyDesc"/>
