@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/backgroundblueyellow"
+             android:theme="@style/AppTheme"
+    android:orientation="vertical">
+
+    <fragment class="com.teamrcy.newjcccstudentmobile.EventsTitlesFragment"
+              android:id="@+id/Events_titles"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_marginTop="15dp"
+              android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+
+        />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:paddingTop="0sp"
+        android:paddingBottom="0sp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/police_badge"
+            android:background="#FFFFFF"
+            android:onClick="callPolice"
+            android:id="@+id/policeButton"
+            android:contentDescription="@string/emergencyDesc"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_facebook"
+            android:onClick="facebookNav"
+            android:id="@+id/facebookButton"
+            android:contentDescription="@string/facebookDesc"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_twitter"
+            android:onClick="twitterNav"
+            android:id="@+id/twitterButton"
+            android:contentDescription="@string/twitterDesc"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_linkedin"
+            android:onClick="linkedinNav"
+            android:id="@+id/linkedinButton"
+            android:contentDescription="@string/linkedInDesc"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_youtube"
+            android:onClick="youtubeNav"
+            android:id="@+id/youtubeButton"
+            android:contentDescription="@string/youtubeDesc"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

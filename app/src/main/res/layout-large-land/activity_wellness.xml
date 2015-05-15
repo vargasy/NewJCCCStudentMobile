@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/backgroundblueyellow"
+              android:baselineAligned="false">
+    <fragment class="com.teamrcy.newjcccstudentmobile.WellnessTitlesFragment"
+              android:id="@+id/wellness_titles"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:layout_marginTop="20dp"
+              android:layout_marginBottom="55dp"
+              style="@style/Pane_1"/>
+
+    <!-- FrameLayouts are used to block out a part of the screen to display normally a single
+    object
+    detailsElementBackground is a background that can provide details about the data
+    the user is selecting -->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        >
+        <WebView
+            android:id="@+id/wellness_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/detailsElementBackground"
+            android:layout_weight="3"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="75dp"
+            style="@style/AppTheme"/>
+
+    </FrameLayout>
+
+</LinearLayout>

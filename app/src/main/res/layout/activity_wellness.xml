@@ -1,47 +1,109 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/backgroundblueyellow"
+             android:theme="@style/AppTheme"
+    android:orientation="vertical">
+
+    <fragment class="com.teamrcy.newjcccstudentmobile.WellnessTitlesFragment"
+              android:id="@+id/wellness_titles"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-     <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="70dp"
-        android:layout_height="match_parent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/jccc_logo_small"
-        android:contentDescription="@string/jcccHomeDesc"/>
-
-    <EditText
-        android:id="@+id/edit_message"
-        android:hint="@string/app_Name"
+              android:layout_height="0dp"
+              android:layout_marginTop="15dp"
+              android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="search subject"/>
 
-    <ImageButton
-        android:id="@+id/sendButton"
-        android:layout_width="50dp"
-        android:layout_height="match_parent"
-        android:onClick="searchJCCC"
-        android:scaleType="fitCenter"
-        android:src="@drawable/search_icon"
-        android:contentDescription="search JCCC"
         />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:paddingTop="0sp"
+        android:paddingBottom="0sp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".Wellness_Activity">
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/police_badge"
+            android:background="#FFFFFF"
+            android:onClick="callPolice"
+            android:id="@+id/policeButton"
+            android:contentDescription="@string/emergencyDesc"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="Pane_2"
-        />
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_facebook"
+            android:onClick="facebookNav"
+            android:id="@+id/facebookButton"
+            android:contentDescription="@string/facebookDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_twitter"
+            android:onClick="twitterNav"
+            android:id="@+id/twitterButton"
+            android:contentDescription="@string/twitterDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_linkedin"
+            android:onClick="linkedinNav"
+            android:id="@+id/linkedinButton"
+            android:contentDescription="@string/linkedInDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_youtube"
+            android:onClick="youtubeNav"
+            android:id="@+id/youtubeButton"
+            android:contentDescription="@string/youtubeDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
-</LinearLayout>
+

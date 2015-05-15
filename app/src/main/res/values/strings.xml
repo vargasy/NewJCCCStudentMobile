@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Cav Community</string>
-    <string name="app_Name">Cav Community</string>
+    <string name="app_name">JCCC Community</string>
+
 
     <string name="action_settings">Settings</string>
     <string name="searchDefaultMessage">Enter your search here.</string>
@@ -8,32 +8,48 @@
     <string name="title_activity_display_message">Display Message</string>
     <string name="title_activity_phone_calls">Phone</string>
 
+    <string name="queryHint">Search JCCC:</string>
     <string name="facebookDesc">Facebook</string>
     <string name="twitterDesc">Twitter</string>
-    <string name="linkedInDesc">LinkedIn</string>
+    <string name="linkedInDesc">Linked In</string>
     <string name="youtubeDesc">YouTube</string>
     <string name="emergencyDesc">Call Campus Police</string>
     <string name="jcccHomeDesc">JCCC Home</string>
 
-    <string name="title_activity_news_">News</string>
-    <string name="newsButton">News Button</string>
+    <string name="title_activity_news">News</string>
     <string name="title_activity_events">Events</string>
-    <string name="eventsButton">Events Button</string>
     <string name="title_activity_athletics">Athletics</string>
-    <string name="athleticsButton">Athletics Button</string>
     <string name="title_activity_myjccc">My JCCC</string>
-    <string name="myjcccButton">My JCCC Button</string>
-    <string name="title_activity_resources_">Resources</string>
-    <string name="resourcesButton">Resources Button</string>
-    <string name="title_activity_campus__life_">Campus Life</string>
-    <string name="campusButton">Campus Life Button</string>
-    <string name="title_activity_discount">Discounts and Services</string>
-    <string name="discountsButton">Discounts Button</string>
-    <string name="wellButton">Wellness Button</string>
+    <string name="title_activity_resources">Resources</string>
+    <string name="title_activity_campus_life">Campus Life</string>
+    <string name="title_activity_clubs">Clubs and Organizations</string>
+    <string name="title_activity_discounts">Discounts</string>
     <string name="title_activity_well">Wellness</string>
     <string name="title_activity_well_details">Wellness</string>
-    <string name="title_activity_wellness">Wellness</string>
+    <string name="title_activity_dining">Dining</string>
+    <string name="title_activity_dining_details">Dining</string>
     <string name="title_activity_contacts">Cavalier Index</string>
-    <string name="contactsButton">Cavalier Index Button</string>
+    <string name="title_activity_map">Campus Map</string>
+    <string name="title_activity_web_view_loader">WebViewLoader</string>
+
+
+    <string name="title_mensBaseball">Men\'s Baseball</string>
+    <string name="title_mensBasketball">Men\'s Basketball</string>
+    <string name="title_mensXC">Men\'s Cross Country</string>
+    <string name="title_mensGolf">Men\'s Golf</string>
+    <string name="title_mensSoccer">Men\'s Soccer</string>
+    <string name="title_mensTennis">Men\'s Tennis</string>
+    <string name="title_mensTrack">Men\'s Track</string>
+    <string name="title_womensBasketball">Women\'s Basketball</string>
+    <string name="title_womensXC">Women\'s Cross Country</string>
+    <string name="title_womensSoccer">Women\'s Soccer</string>
+    <string name="title_womensSoftball">Women\'s Softball</string>
+    <string name="title_womensTennis">Women\'s Tennis</string>
+    <string name="title_womensTrack">Women\'s Track</string>
+    <string name="title_womensVolleyball">Women\'s Volleyball</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_athletics_details">AthleticsDetailsActivity</string>
+
 
 </resources>

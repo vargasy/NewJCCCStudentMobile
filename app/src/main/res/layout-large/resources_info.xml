@@ -15,7 +15,7 @@ Copyright (C) 2012 The Android Open Source Project
     -->
 <!--
 This layout adds two fragments to an activity when the device screen
-is in landscape mode (specified by the LAND qualifier in the directory name).
+is considered "large" (specified by the LARGE qualifier in the directory name).
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,16 +24,16 @@ is in landscape mode (specified by the LAND qualifier in the directory name).
               android:layout_height="match_parent"
               android:baselineAligned="false">
 
-    <fragment android:name="com.teamrcy.newjcccstudentmobile.ResourcesTitlesFragment"
-              android:id="@+id/resources_titles_container"
+    <fragment android:name="com.teamrcy.newjcccstudentmobile.resourceTitlesFragment"
+              android:id="@+id/resource_titles_container"
               android:layout_weight="1"
               android:layout_width="0dp"
               android:layout_height="match_parent"
               style="@style/Pane_1"
         />
 
-    <fragment android:name="com.teamrcy.newjcccstudentmobile.ResourcesDetailsFragment"
-              android:id="@+id/resources_detail_fragment"
+    <fragment android:name="com.teamrcy.newjcccstudentmobile.resourceDetailsFragment"
+              android:id="@+id/resource_detail_fragment"
               android:layout_weight="2"
               android:layout_width="0dp"
               android:layout_height="match_parent"

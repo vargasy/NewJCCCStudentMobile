@@ -29,7 +29,7 @@ is considered "large" (specified by the LARGE qualifier in the directory name).
               android:layout_weight="1"
               android:layout_width="0dp"
               android:layout_height="match_parent"
-              style="@style/Pane_1"
+              style="@style/Pane_1_lg"
         />
 
     <fragment android:name="com.teamrcy.newjcccstudentmobile.CampusDetailsFragment"
@@ -37,7 +37,7 @@ is considered "large" (specified by the LARGE qualifier in the directory name).
               android:layout_weight="2"
               android:layout_width="0dp"
               android:layout_height="match_parent"
-              style="@style/Pane_2"
+              style="@style/Pane_2_lg"
         />
 
 </LinearLayout>

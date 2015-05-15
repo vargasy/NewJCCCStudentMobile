@@ -1,67 +1,135 @@
 package com.teamrcy.newjcccstudentmobile;
 
-import android.app.Activity;
-import android.os.Build;
+import android.app.FragmentTransaction;
+import android.app.ListFragment;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-/**
- * Created by Yvonne on 3/17/2015.
- */
+// Shows the title fragment which is a ListView
+// When a ListView item is selected, place the DetailsFragment in the FrameLayout
+// if the device is in horizontal mode, otherwise create a DetailsActivity in portrait mode.
 public class WellnessTitlesFragment extends ListFragment {
-    OnWellnessTitlesSelectedListener mCallback;
 
+    // True or False depending on if the device is in horizontal (dual-pane) mode
+    boolean mDualPane;
 
-    public interface OnWellnessTitlesSelectedListener {
-        /** Called by TitlesFragment when a list item is selected */
-        public void onDetailsSelected(int position);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // We need to use a different list item layout for devices older than Honeycomb
-        int layout = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ?
-                android.R.layout.simple_list_item_activated_1 : android.R.layout.simple_list_item_1;
-
-        // Create an array adapter for the list view, using the NewsText headlines array
-        setListAdapter(new ArrayAdapter<>(getActivity(), layout, WellnessText.Titles));
-    }
+    // Currently selected item in the ListView
+    int mCurCheckPosition = 0;
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-        // When in two-pane layout, set the listview to highlight the selected list item
-        if (getFragmentManager().findFragmentById(R.id.well_detail_fragment) != null) {
+        // An ArrayAdapter connects the array to the ListView
+        // getActivity() returns a Context to get the resources needed
+        // Pass a default list item text view to put the data into the array.
+        ArrayAdapter<String> connectArrayToListView = new ArrayAdapter<String>(
+                getActivity(),
+                android.R.layout.simple_list_item_activated_1, WellnessInfo.TITLES);
+
+        // Connect the ListView to the data
+        setListAdapter(connectArrayToListView);
+
+        // Check if the FrameLayout with the id details exists
+        View detailsFrame = getActivity().findViewById(R.id.wellness_details);
+
+        // Set mdualPane based on whether the device is in the horizontal layout
+        // Check if the detailsFrame exists and if it is visible
+        mDualPane = detailsFrame != null && detailsFrame.getVisibility() == View.VISIBLE;
+
+        // If the screen is rotated, onSaveInstanceState() below will store the
+        // title most recently selected. Get the value attached to curChoice and
+        // store it in mCurCheckPosition
+        if (savedInstanceState != null) {
+            // Restore last state for checked position.
+            mCurCheckPosition = savedInstanceState.getInt("curChoice", 0);
+        }
+
+        if (mDualPane) {
+            // CHOICE_MODE_SINGLE allows one item in the ListView to be selected at a time
             getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
+            // Send the item selected to showDetails() so the right details are shown
+            showDetails(mCurCheckPosition);
         }
     }
 
+    // Called every time the screen orientation changes or Android kills an Activity to conserve resources
+    // Save the last item selected in the list here and attach it to the key "curChoice"
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-
-        // This makes sure that the container activity has implemented
-        // the callback interface. If not, it throws an exception.
-        try {
-            mCallback = (OnWellnessTitlesSelectedListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnWellnessTitlesSelectedListener");
-        }
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("curChoice", mCurCheckPosition);
     }
 
+    // When a list item is clicked, change the details info
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        // Notify the parent activity of selected item
-        mCallback.onDetailsSelected(position);
+        showDetails(position);
+    }
 
-        // Set the item as checked to be highlighted when in two-pane layout
-        getListView().setItemChecked(position, true);
+    // Shows the details info
+    void showDetails(int index) {
+
+        // The most recently selected title in the ListView is sent
+        mCurCheckPosition = index;
+
+        // Check if the device is in horizontal mode. If so, show the ListView and the details
+        if (mDualPane) {
+
+            // Make the currently selected item highlighted
+            getListView().setItemChecked(index, true);
+
+            // Create an object that represents the current FrameLayout that will show the
+            // details data
+           WellnessDetailsFragment wellnessDetails = (WellnessDetailsFragment)
+                    getFragmentManager().findFragmentById(R.id.wellness_details);
+
+            // When a DetailsFragment is created by calling newInstance, the index for the data
+            // is passed to it. If that index hasn't been assigned, place it in the "if" block
+            if (wellnessDetails == null || wellnessDetails.getShownIndex() != index) {
+
+                // Make the DetailsFragment and give it the currently selected title index
+                wellnessDetails = WellnessDetailsFragment.newInstance(index);
+
+                // Start Fragment transactions
+                FragmentTransaction ft = getFragmentManager().beginTransaction()
+
+                        // ADD A SEMI-COLON ABOVE IF YOU DON'T WANT THIS FOR FLIPPING STATIC
+                        // TEXT CARDS
+                        // Replace the default fragment animations with animator resources representing
+                        // rotations when switching to the back of the card, as well as animator
+                        // resources representing rotations when flipping back to the front (e.g. when
+                        // the system Back button is pressed).
+                        .setCustomAnimations(
+                                R.animator.card_flip_down_out, R.animator.card_flip_up_in);
+
+
+
+                // Replace any other Fragment with our new Details Fragment with the right data
+                ft.replace(R.id.wellness_details, wellnessDetails);
+
+                // TRANSIT_FRAGMENT_FADE calls for the Fragment to fade away
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                ft.commit();
+            }
+
+        } else {
+            // Launch a new Activity to show our DetailsFragment
+            Intent intent = new Intent();
+
+
+            // Define the class Activity to call
+            intent.setClass(getActivity(), WellnessDetailsActivity.class);
+
+            // Pass along the currently selected index assigned to the keyword index
+            intent.putExtra("index", index);
+
+            // Call for the Activity to open
+            startActivity(intent);
+        }
     }
 }

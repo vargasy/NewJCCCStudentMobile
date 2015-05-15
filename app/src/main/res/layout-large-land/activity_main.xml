@@ -1,0 +1,466 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:background="@drawable/backgroundblueyellow"
+              tools:context=".MainActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingBottom="30dp"
+                android:paddingTop="35dp"
+                android:layout_weight="1">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                     xmlns:tools="http://schemas.android.com/tools"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:stretchColumns="0">
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="newsAct">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_news"
+                    android:onClick="newsAct"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/NewsButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="newsAct"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_news"
+                    android:contentDescription="@string/title_activity_news"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="eventsNav">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_events"
+                    android:onClick="eventsNav"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/EventsButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="eventsNav"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_events"
+                    android:contentDescription="@string/title_activity_events"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="athleticsAct">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:onClick="athleticsAct"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_athletics"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/AthleticsButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="athleticsAct"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_athletics"
+                    android:contentDescription="@string/title_activity_athletics"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="myJCCCNav">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:onClick="myJCCCNav"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_myjccc"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/MyJCCCButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="myJCCCNav"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_cav"
+                    android:contentDescription="@string/title_activity_myjccc"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="diningAct">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="diningAct"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_dining"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/DiningButton"
+                    android:layout_width="75sp"
+                    android:onClick="diningAct"
+                    android:layout_height="75sp"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/dining1"
+                    android:contentDescription="@string/title_activity_dining"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="resourcesAct">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:layout_marginLeft="30sp"
+                    android:onClick="resourcesAct"
+                    android:text="@string/title_activity_resources"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/ResourcesButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="resourcesAct"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_resources"
+                    android:contentDescription="@string/title_activity_resources"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="campusAct">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:onClick="campusAct"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_campus_life"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/CampusLifeButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="campusAct"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_campuslife"
+                    android:contentDescription="@string/title_activity_campus_life"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="clubsNav">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:onClick="clubsNav"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_clubs"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/ClubsButton"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:padding="0sp"
+                    android:onClick="clubsNav"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_clubs"
+                    android:contentDescription="@string/title_activity_clubs"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="discountAct"
+                >
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:onClick="discountAct"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_discounts"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/DiscountsServicesButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="discountAct"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_discounts"
+                    android:contentDescription="@string/title_activity_discounts"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="wellnessAct">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:onClick="wellnessAct"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_well"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/WellnessButton"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="wellnessAct"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_wellness"
+                    android:contentDescription="@string/title_activity_well"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="contactNav">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:layout_marginLeft="30sp"
+                    android:onClick="contactNav"
+                    android:text="@string/title_activity_contacts"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/ContactsButtons"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:onClick="contactNav"
+                    android:padding="0sp"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_contacts"
+                    android:contentDescription="@string/title_activity_contacts"/>
+
+            </TableRow>
+
+            <TableRow android:layout_margin="10sp"
+                android:clickable="true"
+                android:onClick="mapNav">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="0sp"
+                    android:onClick="mapNav"
+                    android:layout_marginLeft="30sp"
+                    android:text="@string/title_activity_map"
+                    android:textColor="#000000"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/MapButton"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:padding="0sp"
+                    android:onClick="MapNav"
+                    android:scaleType="fitCenter"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_map"
+                    android:contentDescription="@string/title_activity_map"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:paddingTop="0sp"
+        android:paddingBottom="0sp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/police_badge"
+            android:background="#FFFFFF"
+            android:onClick="callPolice"
+            android:id="@+id/policeButton"
+            android:contentDescription="@string/emergencyDesc"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="15sp"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_facebook"
+            android:onClick="facebookNav"
+            android:id="@+id/facebookButton"
+            android:contentDescription="@string/facebookDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="15sp"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_twitter"
+            android:onClick="twitterNav"
+            android:id="@+id/twitterButton"
+            android:contentDescription="@string/twitterDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="15sp"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_linkedin"
+            android:onClick="linkedinNav"
+            android:id="@+id/linkedinButton"
+            android:contentDescription="@string/linkedInDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="15sp"/>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_youtube"
+            android:onClick="youtubeNav"
+            android:id="@+id/youtubeButton"
+            android:contentDescription="@string/youtubeDesc"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="15sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

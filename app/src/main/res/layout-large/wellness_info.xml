@@ -13,10 +13,10 @@ Copyright (C) 2012 The Android Open Source Project
     See the License for the specific language governing permissions and
     limitations under the License.
     -->
-    <!--
-    This layout adds two fragments to an activity when the device screen
-    is considered "large" (specified by the LARGE qualifier in the directory name).
-    -->
+<!--
+This layout adds two fragments to an activity when the device screen
+is considered "large" (specified by the LARGE qualifier in the directory name).
+-->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
@@ -25,19 +25,19 @@ Copyright (C) 2012 The Android Open Source Project
               android:baselineAligned="false">
 
     <fragment android:name="com.teamrcy.newjcccstudentmobile.WellnessTitlesFragment"
-              android:id="@+id/well_title_container"
+              android:id="@+id/wellness_titles_container"
               android:layout_weight="1"
               android:layout_width="0dp"
               android:layout_height="match_parent"
               style="@style/Pane_1"
-              />
+        />
 
     <fragment android:name="com.teamrcy.newjcccstudentmobile.WellnessDetailsFragment"
-              android:id="@+id/well_detail_fragment"
+              android:id="@+id/wellness_detail_fragment"
               android:layout_weight="2"
               android:layout_width="0dp"
               android:layout_height="match_parent"
               style="@style/Pane_2"
-              />
+        />
 
 </LinearLayout>

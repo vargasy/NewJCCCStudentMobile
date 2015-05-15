@@ -7,11 +7,14 @@ This filename is the same, but the the layout directory does not have the large 
 so this layout is used when the device screen is smaller than large because the screen
 does not fit both fragments at the same time.       -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:id="@+id/resources_titles_container"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+    android:orientation="vertical"
              style="@style/Pane_1"
 
-    />
+    >
+
+</LinearLayout>
 
