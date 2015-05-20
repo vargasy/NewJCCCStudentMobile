@@ -1,17 +1,17 @@
 package com.teamrcy.newjcccstudentmobile;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.support.v7.widget.SearchView; 
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
 import android.view.View;
-
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity implements SearchView.OnQueryTextListener {
@@ -92,7 +92,7 @@ public class MainActivity extends ActionBarActivity implements SearchView.OnQuer
         startActivity(new Intent(this, DiscountsActivity.class));
     }
 
-    public void resourcesAct(View v){ startActivity(new Intent(this, resourcesActivity.class)); }
+    public void resourcesAct(View v){ startActivity(new Intent(this, ResourcesActivity.class)); }
 
     public void diningAct(View v){ startActivity(new Intent(this, DiningActivity.class)); }
 
@@ -123,6 +123,8 @@ public class MainActivity extends ActionBarActivity implements SearchView.OnQuer
     {
         loadWebView("Cav Index", "http://www.jccc.edu/az-index.html");
     }
+
+
 
     public void facebookNav(View view)
     {
@@ -176,6 +178,8 @@ public class MainActivity extends ActionBarActivity implements SearchView.OnQuer
     public void callPolice(View view)
     {
         Intent intent = new Intent(Intent.ACTION_DIAL);
+        Toast.makeText(getApplicationContext(), "Call Campus Police", Toast.LENGTH_LONG).show();
+
         intent.setData(Uri.parse("tel:9134692500"));
         startActivity(intent);
     }

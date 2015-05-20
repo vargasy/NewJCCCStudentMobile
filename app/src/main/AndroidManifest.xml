@@ -38,12 +38,12 @@
             android:parentActivityName=".MainActivity" >
         </activity>
         <activity
-            android:name=".resourcesActivity"
+            android:name=".ResourcesActivity"
             android:label="@string/title_activity_resources"
             android:parentActivityName=".MainActivity" >
         </activity>
         <activity
-            android:name=".resourceDetailsActivity"
+            android:name=".RescourcesDetailsActivity"
             android:label="@string/title_activity_resources"
             android:parentActivityName=".MainActivity" >
         </activity>

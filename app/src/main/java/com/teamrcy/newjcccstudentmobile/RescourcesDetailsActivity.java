@@ -1,23 +1,31 @@
 package com.teamrcy.newjcccstudentmobile;
 
-import android.app.ActionBar;
-import android.app.Activity;
+/*
+        Copyright (C) 2015 Yvonne Huff, Ron Morgan, Chris Scherrer
+        Derivative Work of the Android Open Source Project.
+        Changes made to include progress bars, action bars, styles and use of WebViews.
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        -*/
+
+
 import android.app.ProgressDialog;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
-
-import android.app.Activity;
-import android.content.res.Configuration;
-import android.os.Bundle;
-
-import com.teamrcy.newjcccstudentmobile.R;
-
-public class resourceDetailsActivity extends ActionBarActivity{
+public class RescourcesDetailsActivity extends ActionBarActivity{
     ProgressDialog mDialog;
 
 @Override
@@ -46,7 +54,7 @@ protected void onCreate(Bundle savedInstanceState) {
         if (savedInstanceState == null) {
 
         // If not then create the DetailsFragment
-        resourceDetailsFragment resource_details = new resourceDetailsFragment();
+        ResourcesDetailsFragment resource_details = new ResourcesDetailsFragment();
 
         // Get the Bundle of key-value pairs and assign them to the DetailsFragment
         resource_details.setArguments(getIntent().getExtras());

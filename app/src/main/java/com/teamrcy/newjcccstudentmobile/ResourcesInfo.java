@@ -1,6 +1,6 @@
 package com.teamrcy.newjcccstudentmobile;
 
-public class resourceInfo {
+public class ResourcesInfo {
 
     static String[] TITLES = {
             "Academic and Career Counseling",
@@ -12,13 +12,13 @@ public class resourceInfo {
 
     static String[] DETAILS = {
 
-            "http://students.jccc.edu/cscherr1/CIS264/assets/AcademicCounseling.html",
+            "file:///android_asset/AcademicCounseling.html",
 
-            "http://students.jccc.edu/cscherr1/CIS264/assets/Bookstore.html",
+            "file:///android_asset/Bookstore.html",
 
             "http://www.jccc.edu/student-resources/campus-life/computer-labs/index.html",
 
-            "http://students.jccc.edu/cscherr1/CIS264/assets/Library.html",
+            "file:///android_asset/Library.html",
 
     };
 

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Copyright (C) 2012 The Android Open Source Project
+Copyright (C) 2015 Yvonne Huff, Ron Morgan, Chris Scherrer
+    Derivative Work of the Android Open Source Project.
+    Changes made to include styles and use of WebViews.
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -13,10 +15,8 @@ Copyright (C) 2012 The Android Open Source Project
     See the License for the specific language governing permissions and
     limitations under the License.
     -->
-<!--
-This layout adds two fragments to an activity when the device screen
-is considered "large" (specified by the LARGE qualifier in the directory name).
--->
+
+
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
@@ -24,7 +24,7 @@ is considered "large" (specified by the LARGE qualifier in the directory name).
               android:layout_height="match_parent"
               android:baselineAligned="false">
 
-    <fragment android:name="com.teamrcy.newjcccstudentmobile.resourceTitlesFragment"
+    <fragment android:name="com.teamrcy.newjcccstudentmobile.ResourcesTitlesFragment"
               android:id="@+id/resource_titles_container"
               android:layout_weight="1"
               android:layout_width="0dp"
@@ -32,7 +32,7 @@ is considered "large" (specified by the LARGE qualifier in the directory name).
               style="@style/Pane_1"
         />
 
-    <fragment android:name="com.teamrcy.newjcccstudentmobile.resourceDetailsFragment"
+    <fragment android:name="com.teamrcy.newjcccstudentmobile.ResourcesDetailsFragment"
               android:id="@+id/resource_detail_fragment"
               android:layout_weight="2"
               android:layout_width="0dp"

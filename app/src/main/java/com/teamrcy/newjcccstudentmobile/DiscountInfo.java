@@ -17,19 +17,19 @@ public class DiscountInfo {
 
     static String[] DETAILS = {
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/AMCGoldPasses.html"),
+            ("file:///android_asset/AMCGoldPasses.html"),
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/Automotive.html"),
+            ("file:///android_asset/Automotive.html"),
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/CoCoKey.html"),
+            ("file:///android_asset/CoCoKey.html"),
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/EntBooks.html"),
+            ("file:///android_asset/EntBooks.html"),
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/BusPass.html"),
+            ("file:///android_asset/BusPass.html"),
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/PerformingArtsTickets.html"),
+            ("file:///android_asset/PerformingArtsTickets.html"),
 
-           ("http://students.jccc.edu/cscherr1/CIS264/assets/Salon.html")
+           ("file:///android_asset/Salon.html")
     };
 
 

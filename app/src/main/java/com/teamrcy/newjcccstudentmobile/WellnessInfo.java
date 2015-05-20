@@ -1,5 +1,7 @@
 package com.teamrcy.newjcccstudentmobile;
 
+
+
 public class WellnessInfo {
 
 
@@ -12,15 +14,15 @@ public class WellnessInfo {
     };
 
     static String[] DETAILS = {
-            "http://students.jccc.edu/cscherr1/CIS264/assets/Dental.html",
+            "file:///android_asset/Dental.html",
 
-            "http://students.jccc.edu/cscherr1/CIS264/assets/FitnessCenter.html",
+            "file:///android_asset/FitnessCenter.html",
 
-            "http://students.jccc.edu/cscherr1/CIS264/assets/FoodBank.html",
+            "file:///android_asset/FoodBank.html",
 
-            "http://students.jccc.edu/cscherr1/CIS264/assets/ChildDevelopmentCenter.html",
+            "file:///android_asset/ChildDevelopmentCenter.html",
 
-            "http://students.jccc.edu/cscherr1/CIS264/assets/PersonalCounseling.html"
+            "file:///android_asset/PersonalCounseling.html"
     };
 
 

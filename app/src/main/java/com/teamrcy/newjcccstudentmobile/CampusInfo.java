@@ -9,11 +9,11 @@ class CampusInfo {
     };
 
     static String[] DETAILS = {
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/CStore.html"),
+            ("file:///android_asset/CStore.html"),
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/CampusCenter.html"),
+            ("file:///android_asset/CampusCenter.html"),
 
-            ("http://students.jccc.edu/cscherr1/CIS264/assets/StudentLounge.html")
+            ("file:///android_asset/StudentLounge.html")
     };
 
 

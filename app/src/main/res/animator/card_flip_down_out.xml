@@ -23,4 +23,4 @@
         android:startOffset="@integer/card_flip_time_half"
         android:duration="1" />
 
-</set><!-- From: file:/C:/Users/Christopher/AndroidStudioProjects/JCCC_Community/app/src/main/res/animator/card_flip_down_out.xml -->
+</set>
